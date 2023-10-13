@@ -22,3 +22,9 @@ def on_button_clicked(self, button):
    else:
        self.display.setText(self.display.text() + text)
 
+#Application Setup and Execution 
+app = QApplication(sys.argv)
+calculator = Calculator()
+calculator.show()
+app.exec()
+
