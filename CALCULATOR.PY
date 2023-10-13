@@ -9,3 +9,6 @@ class Calculator(QMainWindow):
                self.layout.addWidget(self.buttons[row * 4 + column], row + 1, column)
        self.setLayout(self.layout)
        self.setWindowTitle('Calculator')
+#Button Connection
+for button in self.buttons.values():
+   button.clicked.connect(self.on_button_clicked)
