@@ -12,3 +12,13 @@ class Calculator(QMainWindow):
 #Button Connection
 for button in self.buttons.values():
    button.clicked.connect(self.on_button_clicked)
+#Button Click(Event) Hnadling 
+def on_button_clicked(self, button):
+   text = button.text()
+   if text == '=':
+       expression = self.display.text()
+       result = eval(expression)
+       self.display.setText(str(result))
+   else:
+       self.display.setText(self.display.text() + text)
+
